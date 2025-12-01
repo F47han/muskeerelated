@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MUSKEE</title>
+<style>
+ :root {
+   --light: #f7f7e9; /* background beige like screenshot */
+   --vivid-brown: #7A2E1C; /* deep warm brown */
+   --body: #000000;
+   --primary: #7A2E1C;
+   --gold: #D4AF37;
+ }
+ body {
+   margin: 0;
+   font-family: Segoe UI, sans-serif;
+   background: var(--light);
+   color: var(--body);
+ }
+ /* Updated NAV BAR to blend with background */
+ header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 26px 60px;
+   background: #f9f9ee; /* softened white to blend better with #f7f7e9 */
+   border-bottom: 1px solid rgba(0,0,0,0.03); /* barely visible, elegant */
+   box-shadow: none;
+ }
+ header h1 {
+   font-size: 32px;
+   letter-spacing: 2px;
+   color: var(--vivid-brown);
+   font-family: "Times New Roman", Georgia, serif;
+   font-weight: 400;
+ }
+ nav a {
+   margin-left: 50px;
+   text-decoration: none;
+   color: var(--vivid-brown);
+   font-size: 17px;
+   letter-spacing: 0.5px;
+   font-family: "Playfair Display", serif;
+   font-weight: 300;
+   position: relative;
+ }
+ nav a::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -3px;
+   width: 0%;
+   height: 2px;
+   background: var(--gold);
+   transition: 0.3s;
+ }
+ nav a:hover::after { width: 100%; }
+
+ .wrapper {
+   max-width: 1200px;
+   margin: auto;
+   padding: 0 20px 40px 20px;
+   display: flex;
+   gap: 60px;
+   flex-wrap: wrap;
+ }
+ .left-section { flex: 1 1 400px; }
+ .product-img {
+   width: 100%;
+   border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ }
+ .right-section { flex: 1 1 400px; }
+
+ .right-section h2 {
+   font-family: "Playfair Display", "Times New Roman", serif;
+   font-weight: 300;
+   letter-spacing: 1px;
+   font-size: 38px;
+   color: var(--vivid-brown);
+   margin-top: 0;
+ }
+ .price {
+   font-size: 22px;
+   font-weight: 300;
+   color: var(--vivid-brown);
+   margin-bottom: 20px;
+   font-family: "Playfair Display", serif;
+ }
+ p {
+   font-weight: 300;
+   color: #000000;
+   font-family: "Playfair Display", serif;
+ }
+ .notes h3 {
+   font-size: 20px;
+   color: var(--vivid-brown);
+   margin-top: 30px;
+   font-family: "Playfair Display", serif;
+   font-weight: 300;
+ }
+ .notes p {
+   line-height: 1.6;
+   font-size: 16px;
+   font-weight: 300;
+   color: #000000;
+   font-family: "Playfair Display", serif;
+ }
+ .buy-btn {
+   display: inline-block;
+   margin-top: 35px;
+   padding: 14px 40px;
+   background: transparent;
+   color: var(--vivid-brown);
+   font-size: 18px;
+   border: 2px solid var(--vivid-brown);
+   border-radius: 6px;
+   cursor: pointer;
+   letter-spacing: 1px;
+   font-family: "Playfair Display", serif;
+   transition: 0.3s ease;
+ }
+ .buy-btn:hover {
+   background: var(--vivid-brown);
+   color: white;
+   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+ }
+ @media (max-width: 800px) {
+   nav a { margin-left: 20px; }
+   header { padding: 15px 20px; }
+ }
+</style>
+</head>
+<body>
+<header>
+  <h1>MUSKEE</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html">Our Ethos</a>
+    <a href="index.html">Products</a>
+    <a href="index.html">Scent Finder</a>
+  </nav>
+</header>
+<div class="wrapper">
+  <div class="left-section">
+    <img class="product-img" src="muskee.jpg" alt="product" />
+  </div>
+  <div class="right-section">
+    <h2>MUSKEE</h2>
+    <div class="price">£20.00</div>
+    <p>Our signature oud with a notable sweet undertone, formulated for any season and occasion.</p>
+    <div class="notes">
+      <h3>SENSING NOTES</h3>
+      <p><strong>Top note – Amber:</strong> The rich, slightly spicy and resinous notes of Amber add a touch of sophistication to this perfume. </p>
+      <p><strong>Heart note – Pineapple:</strong> The satisfying scent of Pineapple bursts through to give this perfume a refreshing but tropical feel. </p>
+      <p><strong>Base note – Vanilla:</strong> Paired with sweet vanilla to give a long-lasting heavenly feel. </p>
+    </div>
+
+    <button class="buy-btn" onclick="window.location.href='#'">Buy Now</button>
+
+  </div>
+</div>
+</body>
+</html>
